@@ -1,0 +1,10 @@
+aparelho = input('Qual o aparelho?: ')
+potencia = int(input('Qual a potência do aparelho em watts? (sugestão: veja no verso do aparelho): '))
+uso = int(input('Quantas horas você usa por dia?: '))
+consumo_kwh = (potencia * uso * 30)/ 1000
+custo_kwh_sp = 0.72
+gasto = (consumo_kwh * custo_kwh_sp)
+
+print(40 * '-')
+print(f'O seu aparelho {aparelho} gasta mensalmente {consumo_kwh:.2f} kWh, isso equivale a R${gasto:.2f} na sua conta de luz mensal.')
+print(40 * '-')
