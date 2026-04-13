@@ -1,0 +1,37 @@
+excelente = 0
+bom = 0
+regular = 0
+ruim = 0
+pessimo = 0
+
+for i in range(50):
+    print(f"\nEntrevistado {i + 1}")
+
+    nome = input("\nDigite o seu nome: ")
+    idade = int(input("Digite a sua idade: "))
+    opiniao = int(input("Com base em nosso atendimento, digite a sua opinião:\n\n"
+                        "1 - Excelente\n"
+                        "2 - Bom\n"
+                        "3 - Regular\n"
+                        "4 - Ruim\n"
+                        "5 - Péssimo\n\n"
+                        "Opção: "))
+
+    if opiniao == 1:
+        excelente += 1
+    elif opiniao == 2:
+        bom += 1
+    elif opiniao == 3:
+        regular += 1
+    elif opiniao == 4:
+        ruim += 1
+    elif opiniao == 5:
+        pessimo += 1
+
+print("\nPesquisa finalizada!")
+print(f"\nResultados da pesquisa:\n\n"
+      f"Excelente: {excelente}\n"
+      f"Bom: {bom}\n"
+      f"Regular: {regular}\n"
+      f"Ruim: {ruim}\n"
+      f"Péssimo: {pessimo}")
