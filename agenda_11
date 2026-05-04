@@ -1,0 +1,29 @@
+import colorama
+from colorama import Fore, Style
+
+print("\nBem-vindo ao sistema de monitoramento do reservatório de água!\nO reservatório atual tem capacidade máxima de 2500 litros.")
+nivel = float(input("\nPor favor, informe o nível atual do reservatório (em litros): "))
+
+#niveis: 0 a 500 litros: extremamente baixo | 500 a 1000 litros baixo | 1000 a 1500 litros: normal | 1500 a 2000 litros: alto | 2000 a 2500 litros: extremamente alto
+
+if nivel <=500:
+    print(Fore.RED + "\nCrítico: Reservatório no nível 1 (extremamente baixo). \nAção: Tomar providências.")
+
+elif nivel <=1000:
+    print(Fore.YELLOW + "\nAtenção: Reservatório no nível 2 (baixo). \nAção: Relatar e monitorar.")
+
+elif nivel <=1500:
+    print(Fore.GREEN + "\nSaudável: Reservatório no nível 3 (normal).")
+
+elif nivel <=2000:
+    print(Fore.CYAN + "\nAlerta: Reservatório no nível 4 (alto). \nAção: Monitorar.")
+
+elif nivel <=2500:
+    print(Fore.BLUE + "\nCrítico: Reservatório no nível 5 (extremamente alto). \nAção: Tomar providências.")
+
+else:
+    print(Fore.MAGENTA + "\n Erro: Valor digitado inválido. Tente novamente reiniciando o programa.")
+
+print(Style.RESET_ALL)
+print("Obrigado por usar o sistema de monitoramento do reservatório de água!\n")
+
